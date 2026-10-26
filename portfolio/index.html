@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hyacinthe Randrianarivelo — Étudiant en Informatique | Développement logiciel & Data Engineering</title>
+<meta name="description" content="Portfolio de Hyacinthe Randrianarivelo, étudiant en Licence 3 Informatique à l'ESMIA (Antananarivo) : développement logiciel, backend, bases de données et Data Engineering.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hyacinthe Randrianarivelo — Portfolio">
+<meta property="og:description" content="Étudiant en Informatique | Développement logiciel & Data Engineering. Projets web, data et mobile.">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f0ebe1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c0583a'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23f7f1e7'%3EHR%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="accueil">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div id="bar" aria-hidden="true"></div>
+
+<header class="site">
+ <div class="wrap bar">
+  <a class="logo" href="#accueil">Hyacinthe<b>.</b></a>
+  <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Navigation principale">
+   <ul>
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main id="contenu">
+ <div class="wrap">
+  <div class="big" aria-hidden="true"><span>Portfolio</span></div>
+  <div class="hg">
+   <div class="intro">
+    <small class="reveal" style="--d:.1s">Bonjour, je suis</small>
+    <h1 class="reveal" style="--d:.2s">Hyacinthe<br>Randrianarivelo</h1>
+    <div class="role reveal" style="--d:.3s">Développeur web &amp; créatif digital</div>
+    <p class="reveal" style="--d:.4s">Étudiant en Licence 3 à l'ESMIA, je construis des applications web, des API et des bases de données pour apprendre en réalisant des projets concrets.</p>
+    <div class="sig reveal" style="--d:.5s" aria-hidden="true">Hyacinthe R.</div>
+    <div class="soc reveal" style="--d:.6s">
+     <a data-cv hidden>CV</a>
+     <a data-github target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+     <a data-linkedin target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+   </div>
+   <div class="photo reveal" style="--d:.3s">
+    <div class="circle"></div>
+    <div class="person" role="img" aria-label="Emplacement de la photo de Hyacinthe">HR</div>
+    <div class="badge" aria-hidden="true">
+     <svg viewBox="0 0 130 130">
+      <defs><path id="cp" d="M65,65 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+      <g class="rot"><text><textPath href="#cp">Licence 3 • Informatique • SIO • ESMIA •</textPath></text></g>
+      <text class="c" x="65" y="74">L3</text>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <section id="apropos">
+  <div class="wrap about">
+   <h2 class="h reveal">À propos<span>de moi</span></h2>
+   <div class="reveal" data-stagger>
+    <p>Je suis étudiant en Licence 3 Informatique, parcours Services Informatiques aux Organisations (SIO), à l'ESMIA à Antananarivo. J'y ai commencé mon parcours en 2024, après un baccalauréat série A2 obtenu en 2023–2024.</p>
+    <p>Je m'intéresse au développement web, au backend, aux API REST, aux bases de données, au Data Engineering et aux applications mobiles. J'apprends en construisant des projets, avec Python, Java, PHP, JavaScript et SQL.</p>
+    <p>Je recherche un premier emploi en développement logiciel pour contribuer à des projets concrets et continuer à progresser.</p>
+   </div>
+  </div>
+ </section>
+
+ <section id="projets">
+  <div class="wrap">
+   <h2 class="h reveal">Projets<span>sélectionnés</span></h2>
+   <p class="lead reveal">Chaque carte ouvre la fiche du projet. Filtre par catégorie pour affiner.</p>
+   <div id="filters" class="filters reveal" role="group" aria-label="Filtrer les projets"></div>
+   <div id="grid" class="grid" aria-live="polite"></div>
+  </div>
+ </section>
+
+ <section id="competences">
+  <div class="wrap">
+   <h2 class="h reveal">Compétences<span>techniques</span></h2>
+   <p class="lead reveal">Technologies rencontrées au fil de mon parcours et de mes projets.</p>
+   <div class="sk" id="skills"></div>
+  </div>
+ </section>
+
+ <section id="parcours">
+  <div class="wrap">
+   <h2 class="h reveal">Formation<span>et parcours</span></h2>
+   <ul class="tl" data-stagger>
+    <li class="reveal"><span class="y">2026 – 2027 · en cours</span><div><b>Licence 3 Informatique — parcours SIO</b><span>ESMIA, Antananarivo</span></div></li>
+    <li class="reveal"><span class="y">2023 – 2024</span><div><b>Baccalauréat, série A2</b><span>Lycée privé Le Trophée, Ankadikely Ilafy</span></div></li>
+   </ul>
+   <div class="ex" data-stagger>
+    <div class="reveal"><h3>Langues</h3><ul><li><b>Malagasy</b> — langue maternelle</li><li><b>Français</b> — niveau avancé</li><li><b>Anglais</b> — compréhension</li></ul></div>
+    <div class="reveal"><h3>Centres d'intérêt</h3><ul><li>Basketball</li><li>Photographie</li><li>Nouvelles technologies</li><li>Natation</li></ul></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <div class="wrap">
+   <h2 class="h reveal">Me<span>contacter</span></h2>
+   <p class="lead reveal">Un projet, une opportunité, une question ? Écris-moi ou retrouve-moi en ligne. Basé à Antananarivo, Madagascar.</p>
+   <div class="cg" data-stagger>
+    <a class="cc reveal" data-email hidden><small>Email</small><b></b><i>↗</i></a>
+    <a class="cc reveal" data-phone hidden><small>Téléphone</small><b></b><i>↗</i></a>
+    <a class="cc reveal" data-linkedin target="_blank" rel="noopener noreferrer"><small>LinkedIn</small><b>hyacinthe-randrianarivelo</b><i>↗</i></a>
+    <a class="cc reveal" data-github target="_blank" rel="noopener noreferrer"><small>GitHub</small><b>randrianrivelo</b><i>↗</i></a>
+    <a class="cc reveal" data-cv hidden><small>CV</small><b></b><i>↗</i></a>
+    <div class="cc reveal"><small>Localisation</small><b>Antananarivo, Madagascar</b></div>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© <span id="year">2026</span> Hyacinthe Randrianarivelo</span>
+  <span><a data-github target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp; <a data-linkedin target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+  <a href="#accueil">Retour en haut ↑</a>
+ </div>
+</footer>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
