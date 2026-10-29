@@ -18,7 +18,7 @@ const PROJECTS = [
     summary: "Plateforme d'aide en cas de cyclone ou d'inondation à Analamanga : informations sur les zones à risque, les abris et les itinéraires.",
     tech: ["Python", "FastAPI", "React", "Vite", "PostgreSQL", "Docker", "API REST"],
     facts: ["Données du projet (et non des statistiques officielles) : 10 districts, 32 communes, 88 refuges, 20 routes, 8 zones dangereuses et 3 alertes."],
-    github: "", demo: "", image: ""
+    github: "https://github.com/randrianrivelo/Safe_Zone", demo: "", image: "assets/images/projects/safezone.svg"
   },
   {
     id: "ecommerce-data", title: "Data Engineering — E-commerce", category: "Data",
@@ -28,49 +28,49 @@ const PROJECTS = [
             "Jeu de données : 1 030 clients, 10 catégories, 530 produits, 10 000 commandes, 30 000 lignes de commande, 10 000 paiements et 6 727 expéditions.",
             "Requêtes analytiques sur les retards de livraison et les coûts d'expédition.",
             "Comparaison des performances de requêtes via EXPLAIN ANALYZE."],
-    github: "", demo: "", image: ""
+    github: "https://github.com/randrianrivelo/Data-Engineering", demo: "", image: "assets/images/projects/ecommerce-data.svg"
   },
   {
     id: "miaina", title: "Miaina — Urgences médicales et chatbot", category: "Hackathon",
     summary: "Application orientée vers les urgences médicales, intégrant un chatbot, présentée lors d'un hackathon interne de l'ESMIA en 2025.",
     tech: [],
     facts: ["Certificat de participation obtenu au hackathon interne ESMIA (2025).", "Prototype de hackathon, pas un dispositif médical validé."],
-    github: "", demo: "", image: ""
+    github: "https://github.com/randrianrivelo/Miaina", demo: "", image: "assets/images/projects/miaina.svg"
   },
   {
     id: "gestion-restaurant", title: "Gestion de restaurant", category: "Backend",
     summary: "Application web de gestion de restaurant, construite selon l'architecture MVC.",
     tech: ["PHP", "MySQL", "POO", "MVC"],
     facts: [],
-    github: "", demo: "", image: ""
+    github: "https://github.com/randrianrivelo/Kafe-Milay", demo: "", image: "assets/images/projects/gestion-restaurant.svg"
   },
   {
     id: "vote-electronique", title: "Système de vote électronique", category: "Académique", status: "Projet académique · L1",
     summary: "Informatisation d'un processus de vote : logique de participation et organisation d'un scrutin.",
     tech: [],
     facts: [],
-    github: "", demo: "", image: ""
+    github: "", demo: "", image: "assets/images/projects/vote-electronique.svg"
   },
   {
     id: "gestion-ecole", title: "Gestion_ecole", category: "Backend", status: "En développement",
     summary: "Projet de gestion scolaire avec Django.",
     tech: ["Django", "Python"],
     facts: ["Application « etudiants », modèle Etudiant et migrations initiales en place."],
-    github: "", demo: "", image: ""
+    github: "", demo: "", image: "assets/images/projects/gestion-ecole.svg"
   },
   {
     id: "framework-php", title: "framework-php", category: "Backend",
     summary: "Projet académique Laravel 12 avec Blade.",
     tech: ["Laravel", "PHP", "Blade"],
     facts: ["Routes web, contrôleur de cours, liste de produits et page de détail."],
-    github: "", demo: "", image: ""
+    github: "", demo: "", image: "assets/images/projects/framework-php.svg"
   },
   {
     id: "android-intent", title: "Android — Intent", category: "Mobile",
     summary: "Projet académique Android réalisé avec Android Studio et Java.",
     tech: ["Android Studio", "Java"],
     facts: [],
-    github: "", demo: "", image: ""
+    github: "", demo: "", image: "assets/images/projects/android-intent.svg"
   }
 ];
 

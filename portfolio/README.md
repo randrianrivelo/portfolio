@@ -23,3 +23,6 @@ disponibilité (non affichée tant que non confirmée), liens GitHub et captures
 
 ## Déploiement
 Dépose le dossier sur GitHub Pages, Netlify ou Vercel (site statique, pas de build). Une fois l'URL finale connue, ajoute la balise `canonical` et une image Open Graph.
+
+## Visuels des projets
+Les images de `assets/images/projects/*.svg` sont des illustrations par défaut. Pour une vraie capture, mets-la dans `assets/images/` (JPG, ~1000 px, < 200 Ko) et change `image:` du projet dans `js/projects.js`.

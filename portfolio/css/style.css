@@ -56,9 +56,9 @@ nav a.on{color:var(--acc)}
 .person img{width:100%;height:100%;object-fit:cover}
 .badge{position:absolute;right:0;top:10%;width:120px;height:120px}
 .badge svg{width:100%;height:100%}
-.badge .rot{animation:spin 26s linear infinite;transform-origin:center}
+.badge .ring{animation:spin 26s linear infinite;transform-origin:50% 50%}
 .badge text{font:600 9.5px var(--sans);letter-spacing:.22em;fill:var(--ink);text-transform:uppercase}
-.badge .c{font:500 26px var(--serif);fill:var(--acc);letter-spacing:0;text-anchor:middle}
+.badge .bd{position:absolute;inset:0;display:grid;place-items:center;font:500 28px var(--serif);color:var(--acc)}
 @keyframes spin{to{transform:rotate(360deg)}}
 /* sections */
 section{padding:72px 0 60px;border-top:1px solid var(--line)}
@@ -89,6 +89,7 @@ section{padding:72px 0 60px;border-top:1px solid var(--line)}
 .ti .ico{font-size:20px;width:20px;height:20px}
 .tt{font:500 clamp(26px,2.6vw,32px)/1.02 var(--serif);text-transform:uppercase;max-width:92%}
 .thumb.im .tt{display:none}
+.card:has(.more-l:focus-visible){outline:2px solid var(--acc);outline-offset:3px}
 .cb{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
 .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
 .meta .k{color:var(--acc)}
@@ -96,10 +97,17 @@ section{padding:72px 0 60px;border-top:1px solid var(--line)}
 .cb p{font-size:14px;color:var(--mut);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags li{font-size:11px;border:1px solid var(--line);padding:2px 9px;white-space:nowrap}
-.go{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:color .3s}
-.go i{font-style:normal;transition:transform .3s}
-.card:hover .go{color:var(--acc)}
-.card:hover .go i{transform:translateX(6px)}
+.card{position:relative}
+.ct{font:600 24px/1.1 var(--serif)}
+.go{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.more-l{display:inline-flex;align-items:center;gap:8px;min-height:32px;transition:color .3s}
+.more-l::after{content:"";position:absolute;inset:0}
+.more-l i{font-style:normal;transition:transform .3s}
+.card:hover .more-l{color:var(--acc)}
+.card:hover .more-l i{transform:translateX(6px)}
+.src{position:relative;z-index:2;display:inline-flex;align-items:center;min-height:44px;padding:0 4px;border-bottom:1px solid var(--ink);margin-left:auto}
+.src:hover{color:var(--acc);border-color:var(--acc)}
+.cover{width:100%;height:auto;margin-bottom:28px;border:1px solid var(--line)}
 /* skills / timeline / contact */
 .sig{font:40px/1.2 "Pinyon Script",cursive;margin:6px 0 2px;color:var(--ink)}
 .sk{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
@@ -190,6 +198,6 @@ footer a:hover{color:var(--acc)}
  html{scroll-behavior:auto}
  .js .reveal{opacity:1;translate:none;transition:none}
  .js .big span{transform:none;transition:none}
- .badge .rot{animation:none}
+ .badge .ring{animation:none}
  .card,.thumb img,nav a::after,.skc,.skc li,.ico{transition:none}
 }

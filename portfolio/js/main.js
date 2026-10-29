@@ -50,17 +50,19 @@
   const grid = $("#grid");
   if (grid) {
     const card = (p, i) => `
-      <a class="card reveal" href="project.html?id=${encodeURIComponent(p.id)}" aria-label="Voir le projet ${esc(p.title)}">
+      <article class="card reveal">
         <div class="thumb${p.image ? " im" : ""}" style="--tc:${TC[p.category] || TC.Web}">
-          ${p.image ? `<img src="${esc(p.image)}" alt="Capture de ${esc(p.title)}" loading="lazy" width="640" height="440">` : ""}
+          ${p.image ? `<img src="${esc(p.image)}" alt="Illustration du projet ${esc(p.title)}" loading="lazy" width="640" height="440">` : ""}
           <div class="tr"><span class="tn">${num(i)}</span><div class="ti">${p.tech.map(t => ICONS[t] ? `<span title="${esc(t)}">${icon(t)}</span>` : "").slice(0, 4).join("")}</div></div>
           <div class="tt">${esc(p.title)}</div>
         </div>
         <div class="cb">
           <div class="meta"><span class="k">${esc(p.category)}</span>${p.status ? `<span class="st">${esc(p.status)}</span>` : ""}</div>
+          ${p.image ? `<h3 class="ct">${esc(p.title)}</h3>` : ""}
           <p>${esc(p.summary)}</p>${tags(p.tech)}
-          <div class="go"><span>Voir le projet</span><i aria-hidden="true">→</i></div>
-        </div></a>`;
+          <div class="go"><a class="more-l" href="project.html?id=${encodeURIComponent(p.id)}" aria-label="Voir le projet ${esc(p.title)}">Voir le projet <i aria-hidden="true">→</i></a>
+          ${p.github ? `<a class="src" href="${esc(p.github)}" target="_blank" rel="noopener noreferrer" aria-label="Code source de ${esc(p.title)} sur GitHub">Code source ↗</a>` : ""}</div>
+        </div></article>`;
     const render = cat => {
       grid.innerHTML = PROJECTS.map((p, i) => ({ p, i })).filter(({ p }) => cat === "Tout" || p.category === cat).map(({ p, i }) => card(p, i)).join("");
       reveal(grid);
@@ -102,6 +104,7 @@
         </div>
         <div class="pl">
           <div class="pm">
+            ${p.image ? `<img class="cover" src="${esc(p.image)}" alt="Illustration du projet ${esc(p.title)}" width="800" height="550">` : ""}
             ${p.facts.length ? sec("Ce que contient le projet", p.facts) : ""}
             ${(p.details || []).map(d => sec(d.t, d.items)).join("")}
             ${(p.shots || []).length ? `<h2>Captures</h2><div class="shots">${p.shots.map((s, k) => `<img src="${esc(s)}" alt="Capture ${k + 1} de ${esc(p.title)}" loading="lazy" width="640" height="400">`).join("")}</div>` : ""}
