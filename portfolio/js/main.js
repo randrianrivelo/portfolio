@@ -120,6 +120,27 @@
     }
   }
 
+  /* Carte de visite : texte, retournement, vCard */
+  const bc = $("#bc");
+  if (bc) {
+    $$("[data-f]", bc).forEach(e => { const k = e.dataset.f; e.textContent = k === "name" ? SITE.name : (SITE[k] || ""); if (!e.textContent) e.hidden = true; });
+    const front = $("#bcf"), back = $("#bcb"), fb = $("#flip");
+    fb.addEventListener("click", () => {
+      const on = bc.classList.toggle("flip");
+      fb.setAttribute("aria-pressed", on); fb.textContent = on ? "Voir le recto" : "Retourner la carte";
+      front.toggleAttribute("inert", on); front.setAttribute("aria-hidden", on);
+      back.toggleAttribute("inert", !on); back.setAttribute("aria-hidden", !on);
+    });
+    $("#vcf").addEventListener("click", () => {
+      const [fn, ...ln] = SITE.name.split(" ");
+      const v = ["BEGIN:VCARD", "VERSION:3.0", `N:${ln.join(" ")};${fn};;;`, `FN:${SITE.name}`, SITE.phoneTel && `TEL;TYPE=CELL:${SITE.phoneTel}`, SITE.email && `EMAIL:${SITE.email}`, `URL:${SITE.github}`, "END:VCARD"].filter(Boolean).join("\r\n");
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([v], { type: "text/vcard;charset=utf-8" }));
+      a.download = "Hyacinthe-Randrianarivelo.vcf"; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    });
+  }
+
   /* Scroll reveal : apparition douce de bas en haut, puis nettoyage des classes */
   function reveal(root = document) {
     const els = $$(".reveal:not(.in)", root);

@@ -26,3 +26,6 @@ Dépose le dossier sur GitHub Pages, Netlify ou Vercel (site statique, pas de bu
 
 ## Visuels des projets
 Les images de `assets/images/projects/*.svg` sont des illustrations par défaut. Pour une vraie capture, mets-la dans `assets/images/` (JPG, ~1000 px, < 200 Ko) et change `image:` du projet dans `js/projects.js`.
+
+## Carte de visite
+Le QR code (`assets/images/qr-contact.svg`) encode ton contact (nom, téléphone, email, GitHub). Si tu changes ton téléphone ou ton email dans `SITE`, régénère le QR (le bouton « Enregistrer le contact » se met à jour tout seul, pas le QR).

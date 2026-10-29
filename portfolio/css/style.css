@@ -207,3 +207,32 @@ footer a:hover{color:var(--acc)}
 .cb,.thumb,.card{min-width:0}
 .cb p,.cb h3,.ct{overflow-wrap:anywhere}
 .nofont .big{font:700 clamp(30px,11vw,120px)/1 system-ui,sans-serif;letter-spacing:.02em}
+
+/* carte de visite */
+.bc-wrap{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:40px;align-items:center;margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+.bc{perspective:1200px;width:100%;height:clamp(210px,58vw,262px)}
+.bc-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.bc.flip .bc-in{transform:rotateY(180deg)}
+.bc-f{position:absolute;inset:0;padding:22px;display:flex;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 26px 44px -28px rgba(20,20,20,.6);overflow:hidden}
+.bc-front{flex-direction:column;justify-content:space-between;background:#1d1a18;color:#f0ebe1}
+.bc-front::before{content:"";position:absolute;right:-60px;top:-60px;width:190px;height:190px;border-radius:50%;background:var(--fill)}
+.bc-front>*{position:relative}
+.bc-logo{font:600 17px var(--serif)}.bc-logo b{color:#e8845f}
+.bc-name{font:500 clamp(21px,5.6vw,27px)/1.05 var(--serif);text-transform:uppercase;margin-top:14px}
+.bc-role{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#e8845f;font-weight:600;margin-top:6px}
+.bc-l{font-size:12.5px;display:grid;gap:3px;overflow-wrap:anywhere}
+.bc-back{transform:rotateY(180deg);background:var(--fill);color:#fff;align-items:center;gap:18px}
+.bc-back img{width:132px;height:132px;flex:none;background:#f0ebe1;padding:6px}
+.bc-back p{font:500 20px/1.15 var(--serif)}
+.bc-side p{color:var(--mut);margin:8px 0 4px;max-width:420px}
+@media(max-width:860px){.bc-wrap{grid-template-columns:minmax(0,1fr);gap:26px}}
+@media(max-width:400px){.bc-back img{width:112px;height:112px}.bc-back{gap:12px;padding:16px}.bc-back p{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.bc-in{transition:none}}
+@media(max-width:480px){
+ .bc{height:260px}
+ .bc-f{padding:18px}
+ .bc-front::before{width:120px;height:120px;right:-42px;top:-42px}
+ .bc-name{font-size:21px;margin-top:10px}
+ .bc-role{font-size:10px;letter-spacing:.1em}
+ .bc-l{font-size:11.5px}
+}
