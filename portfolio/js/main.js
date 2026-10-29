@@ -137,6 +137,13 @@
     });
   }
   reveal();
+  const fit = () => {
+    const s = $(".big span"); if (!s) return;
+    const r = document.documentElement.classList; r.remove("nofont");
+    if (s.scrollWidth > s.clientWidth + 1) r.add("nofont");
+  };
+  fit(); addEventListener("load", fit); addEventListener("resize", fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   const big = $(".big"); if (big) setTimeout(() => big.classList.add("in"), 80);
 
   /* Lien de menu actif */
